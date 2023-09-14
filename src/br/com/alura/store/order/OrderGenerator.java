@@ -16,10 +16,15 @@ public class OrderGenerator {
         this.itemsAmount = itemsAmount;
     }
 
-    public void execute () {
-        Budget budget = new Budget(this.budgetValue, this.itemsAmount);
-        String client = this.client;
+    public String getClient() {
+        return client;
+    }
 
-        Order order = new Order(client, LocalDateTime.now(), budget);
+    public BigDecimal getBudgetValue() {
+        return budgetValue;
+    }
+
+    public int getItemsAmount() {
+        return itemsAmount;
     }
 }
